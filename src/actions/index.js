@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { UNAUTH_USER, AUTH_USER, AUTH_ERROR, FETCH_MESSAGE } from './types'
-const ROOT_URL = 'https://project-wayfarer-tmst.herokuapp.com/'
+const ROOT_URL = 'https://tmst-project-wayfarer.herokuapp.com/'
 
 export function signinUser({email, password}) {
 
