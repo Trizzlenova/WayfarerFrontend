@@ -1,6 +1,5 @@
 import axios from 'axios'
-
-
+const ROOT_URL = 'https://tmst-project-wayfarer.herokuapp.com/'
 
 const defaultState = [
     {
@@ -31,7 +30,7 @@ function posts(state = defaultState, action) {
     switch (action.type) {
         case 'FILTER_POSTS':
             console.log("filtering posts")
-            axios.get('/api/posts')
+            axios.get(`${ROOT_URL}/api/posts`)
             .then(res => {
                 console.log(state)
                 return res.filter(res.name === action.city)
